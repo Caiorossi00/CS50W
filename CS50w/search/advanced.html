@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Google Advanced Search</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="top-links">
+      <a href="index.html">Google Search</a>
+      <a href="images.html">Image Search</a>
+    </div>
+
+    <div class="container-advanced">
+      <h1 class="advanced-search-h1">Advanced Search</h1>
+      <form
+        action="https://www.google.com/search"
+        method="GET"
+        class="advanced-form"
+      >
+        <div class="form-row">
+          <label for="all">all of these words:</label>
+          <input type="text" id="all" name="as_q" />
+          <span>Type the important words: <strong>cat dog horse </strong></span>
+        </div>
+
+        <div class="form-row">
+          <label for="exact">this exact word or phrase:</label>
+          <input type="text" id="exact" name="as_epq" />
+          <span>Put exact words in quotes: <strong>"cat and dog"</strong></span>
+        </div>
+
+        <div class="form-row">
+          <label for="any">any of these words:</label>
+          <input type="text" id="any" name="as_oq" />
+          <span
+            >Type OR between all the words you want:
+            <strong>miniature OR standard</strong></span
+          >
+        </div>
+
+        <div class="form-row">
+          <label for="none">none of these words:</label>
+          <input type="text" id="none" name="as_eq" />
+          <span
+            >Put a minus sign just before words you don't want:
+            <strong>-lorem, -"Lorem Ipsum"</strong></span
+          >
+        </div>
+
+        <div class="form-row">
+          <input
+            type="submit"
+            value="Advanced Search"
+            class="btn-advanced-search"
+          />
+        </div>
+      </form>
+    </div>
+  </body>
+</html>

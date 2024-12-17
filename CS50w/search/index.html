@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Google Search</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="top-links">
+      <a href="images.html">Image Search</a>
+      <a href="advanced.html">Advanced Search</a>
+    </div>
+
+    <div class="search-container">
+      <div class="search-content">
+        <img
+          src="https://www.google.com.br/logos/doodles/2024/seasonal-holidays-2024-6753651837110333.2-la202124.gif"
+          alt="Google Doodle"
+          class="google-logo"
+        />
+
+        <form action="https://www.google.com/search" method="GET">
+          <input
+            type="text"
+            name="q"
+            placeholder="Search Google"
+            class="search-bar"
+          />
+          <div class="btn-search">
+            <input type="submit" value="Google Search" class="btn-icon" />
+            <a href="#" id="lucky" class="btn-icon">I'm Feeling Lucky</a>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <script>
+      document.getElementById("lucky").addEventListener("click", function (e) {
+        e.preventDefault();
+        const query = document.querySelector(".search-bar").value;
+        if (query) {
+          window.location.href = `https://www.google.com/search?q=${query}&btnI=1`;
+        }
+      });
+    </script>
+  </body>
+</html>
